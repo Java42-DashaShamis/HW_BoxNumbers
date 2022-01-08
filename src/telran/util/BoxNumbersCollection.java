@@ -15,6 +15,9 @@ public abstract class BoxNumbersCollection implements BoxNumbers {
 		return col.remove(num);
 	}
 	public Integer removeByPredicate(Predicate<Integer> predicate) {
+		/* V.R.
+		 *  To use col.removeIf(predicate) is more short and effective 
+		 */
 		int sizeOld = col.size();
 		Iterator<Integer> it = iterator();
 		while(it.hasNext()) {

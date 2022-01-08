@@ -6,6 +6,9 @@ public abstract class BoxNumbersList extends BoxNumbersCollection{
 	
 	@Override
 	public Integer removeRepeated() {
+		// V.R. It is right to get HashSet directly from Collection
+		// There is the way to get Collection directly from HashSet.
+		// Think about this way. It is possible to see how it looks at my repository.
 		HashSet<Integer> hashset = new HashSet<>(col);
 		Iterator<Integer> it = iterator();
 		int sizeOld = col.size();
